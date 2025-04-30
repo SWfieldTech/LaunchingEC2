@@ -1,0 +1,126 @@
+aws ec2 create-security-group --group-name "MyEC2-SG" --description "launch-wizard-1 created 2025-04-30T01:37:59.622Z" --vpc-id "vpc-0265b40dc73459d15" 
+aws ec2 authorize-security-group-ingress --group-id "sg-preview-1" --ip-permissions '{"IpProtocol":"tcp","FromPort":22,"ToPort":22,"IpRanges":[{"CidrIp":"0.0.0.0/0"}]}' 
+aws ec2 run-instances --image-id "ami-0e449927258d45bc4" --instance-type "t2.micro" --key-name "MyEC2-key" --network-interfaces '{"AssociatePublicIpAddress":true,"DeviceIndex":0,"Groups":["sg-preview-1"]}' --credit-specification '{"CpuCredits":"standard"}' --tag-specifications '{"ResourceType":"instance","Tags":[{"Key":"Name","Value":"MyEC2Instance"}]}' --metadata-options '{"HttpEndpoint":"enabled","HttpPutResponseHopLimit":2,"HttpTokens":"required"}' --private-dns-name-options '{"HostnameType":"ip-name","EnableResourceNameDnsARecord":true,"EnableResourceNameDnsAAAARecord":false}' --count "1" 
+aws iam list-instance-profiles --max-items "200" 
+aws directoryservice describe-directories --limit "200" 
+aws ec2 create-security-group --group-name "MyEC2-SG" --description "launch-wizard-1 created 2025-04-30T01:37:59.622Z" --vpc-id "vpc-0265b40dc73459d15" 
+aws ec2 authorize-security-group-ingress --group-id "sg-051314c43c9d80f8a" --ip-permissions '{"IpProtocol":"tcp","FromPort":22,"ToPort":22,"IpRanges":[{"CidrIp":"0.0.0.0/0"}]}' 
+aws ec2 describe-security-groups --max-results "1000" 
+aws ec2 run-instances --image-id "ami-0e449927258d45bc4" --instance-type "t2.micro" --key-name "MyEC2-key" --network-interfaces '{"AssociatePublicIpAddress":true,"DeviceIndex":0,"Groups":["sg-051314c43c9d80f8a"]}' --credit-specification '{"CpuCredits":"standard"}' --tag-specifications '{"ResourceType":"instance","Tags":[{"Key":"Name","Value":"MyEC2Instance"}]}' --iam-instance-profile '{"Arn":"arn:aws:iam::111014750010:instance-profile/EC2_Role_272588.60334425"}' --metadata-options '{"HttpEndpoint":"enabled","HttpPutResponseHopLimit":2,"HttpTokens":"required"}' --private-dns-name-options '{"HostnameType":"ip-name","EnableResourceNameDnsARecord":true,"EnableResourceNameDnsAAAARecord":false}' --count "1" 
+aws ec2 describe-tags --max-results "1000" --filters '{"Name":"resource-type","Values":["instance"]}' 
+aws ec2 describe-account-attributes  
+aws ec2 describe-instances --max-results "1000" 
+aws cloudwatchinternal2013 describe-alarms --max-records "1000" --state-value "ALARM" 
+aws ec2 describe-instance-types --max-results "100" 
+aws ec2 describe-instance-types --max-results "100" 
+aws ec2 describe-instance-types --max-results "100" --next-token "AAIAAZlAhTcS6irEoZ5T5-5YgYdfkUPFURJXUQXDWQNee3K-y-K6QuPo3gaA0r-A5f0PqZXjdWclgk3oyHd_H1PPexc4BG2jjO0_lpPvEZ7LOM8T3Rv_wWMZnj13dX4I9um49gKCCpo1YtXkNN3KZ4rSsULzTZqNshqmq-tsefzNyzEaZ4yxbt5oPmTCP0p4GcdlL2KqH-0z3FdUR4Fg" 
+aws ec2 describe-addresses --filters '{"Name":"instance-id","Values":["i-0a0d8a23353013215"]}' 
+aws ec2 describe-instance-status --instance-ids "i-0a0d8a23353013215" 
+aws ec2 describe-instance-types --max-results "100" --next-token "AAIAAe1AV3mOoG7GOMLcxREgJYkUH7LDZF5kYVG_Sp3t9igLXgAg3FZTQN5jhB806xtVSKf_DnuiVxr2e75Z-mGJ5tGA0U4jCr0fZeplTLj1U7b-DgTeqyBcRnnbyydCfWS_fze2_lVJ2yeO6AJfygor5ec8zfHE47oAqC5hnGtnB_VOiiLnVSh-FBpSnCCVFKfPWZmcTbRJwQLflPM=" 
+aws ec2 describe-instance-types --max-results "100" --next-token "AAIAAVxelKAIjTYS6Z1PhierSo0BJDYYqGr_uY9ocbUEsfZfRQUXsW-KxmVzM38DNQjgAADtjBPAkTiL8bwt5D7qAG9t3sbYoXZjlU4abRNurP-fbf5xhp7zD1RLgGDWacJ5h_W-igDQ0b0KIWxlTmxzUOTwxmUoXZinltt3VTwLdA81BgvMK8iPMKI67vGrgQ0GCypcl6JLIEpOlUTA" 
+aws ec2 describe-instance-types --max-results "100" --next-token "AAIAAePM7R4bYYUAwERyYc0f64WvELDnA81z6QQu-lLotwa98HJ2vCqwPi0-McWFBvws7y_Rf4N7C-82GERaJQDYV2EgWVHNgbh5waNKkUSXcoWMCK-CEjoEXY975VDkKQ0weZMjIJDX_EiS0Vj4kTdhuNStbvy9324zSFxJrlJN5wY_6RjqeJdjqoXM1Ex2Mq9Ky_2bcXcs8yNuEOko" 
+aws ec2 describe-instance-types --max-results "100" --next-token "AAIAAeAmvLOeLzK7XUHUMWOFE14Kl_Tn1pppX1VDTnAzFFglUnowvzjpcnj-IIZk6iN7z0Wgi3WDhW4oAxVy0OauhYGfvAt8KrKTnBIN9DYfgFi99k3pskN_cUfe-5mUTqz7Zbx0OREHo1pf_NJkuSm0UHU9rtNkjEvUPm4BevtpwvjR1A7bS4PKFU6yEvXtevC0IyK0dbkV1lmYOzsQ" 
+aws ec2 describe-instance-types --max-results "100" --next-token "AAIAAaB3fACFl1veAjJipiA_sqhiy8YP_vVEdiBfaPTPJ9mREtdSQ-1989BOlbGMbx5CTwZ7nE4w7PoZsHczCdiDP0yUtBMciHPHgFndhRiTz--Ad2_1qbvQ4uwBIMIBLA7YIjXYTqTG7c8ilxArbaHxuPlMjATanIJS9jLvjjjRNervLsNSjGeEh6Qjcy2-M5_tgxJjK3DGOBQ2daqf" 
+aws ec2 describe-instance-types --max-results "100" --next-token "AAIAAc9yWiEzWMlqqdQwv5GaBotvolNA7xfI525njaAmZGthi2JoZNJs-gWUGbCi8CUPVlR9sCzaTNqKDs68H4Wc8GmF-TCSD-WevIHQNXzRS4MR1U22EbR3VOg5UDGx9izthU-a00RUR2sIgFtTY3R-_wcURTiasz9TgsKQQw7lpgNskQ3mAocsPxVlHwjJOdfNEq6xk5DNrciQVw==" 
+aws ec2 describe-instance-types --max-results "100" --next-token "AAIAAQ1YeSYHU8b611YYpZ7RhBx_vw2rDK6sUzG7O4nR-7vE1Gd9RW9nKdMvO3MGvNOn99USSZwhn90myOiZb3AZ3cLsW2MkRDWGVFJfSbCgsiQwQIa0cnjcUb3yZZS0fcj7v7ANl-Yek7MVxQMnPfbvUZcDvuM5QVa15yC3y7Z4YJwSPgRYHDBsinm034MhPFiSdDUi2RVtwpI=" 
+aws cloudwatchinternal2013 describe-alarms --max-records "1000" --state-value "ALARM" 
+aws ec2 describe-instances --max-results "1000" 
+aws ec2 describe-addresses --filters '{"Name":"instance-id","Values":["i-0a0d8a23353013215"]}' 
+aws ec2 describe-instance-status --instance-ids "i-0a0d8a23353013215" 
+aws ec2 describe-instance-image-metadata --instance-ids "i-0a0d8a23353013215" 
+aws ec2 describe-network-interfaces --filters '{"Name":"attachment.instance-id","Values":["i-0a0d8a23353013215"]}' 
+aws ec2 describe-addresses --filters '{"Name":"instance-id","Values":["i-0a0d8a23353013215"]}' 
+aws ec2 describe-instances --instance-ids "i-0a0d8a23353013215" 
+aws ec2 describe-replace-root-volume-tasks --filters '{"Name":"instance-id","Values":["i-0a0d8a23353013215"]}' --max-results "50" 
+aws ec2 describe-volumes --volume-ids "vol-0f5fa7368f150ccb2" 
+aws cloudwatchinternal2013 search-metrics --query "Namespace="CWAgent" InstanceId="i-0a0d8a23353013215"" --max-results "500" 
+aws ssm describe-instance-information --filters '{"Key":"InstanceIds","Values":["i-0a0d8a23353013215"]}' 
+aws ec2 describe-instance-credit-specifications --instance-ids "i-0a0d8a23353013215" 
+aws ec2 describe-instance-attribute --instance-id "i-0a0d8a23353013215" --attribute "disableApiStop" 
+aws ec2 describe-instance-attribute --instance-id "i-0a0d8a23353013215" --attribute "disableApiTermination" 
+aws ec2 describe-network-interfaces --filters '{"Name":"attachment.instance-id","Values":["i-0a0d8a23353013215"]}' 
+aws health describe-events --filter '{"services":["EC2"],"entityValues":["i-0a0d8a23353013215"],"eventTypeCodes":["AWS_EC2_SIMPLIFIED_AUTO_RECOVERY_SUCCESS","AWS_EC2_INSTANCE_AUTO_RECOVERY_SUCCESS","AWS_EC2_SIMPLIFIED_AUTO_RECOVERY_FAILURE","AWS_EC2_INSTANCE_AUTO_RECOVERY_FAILURE"],"startTimes":[{"from":"2025-04-26T01:41:57.264Z"}]}' 
+aws computeoptimizer get-enrollment-status  
+aws ec2 describe-images --image-ids "ami-0e449927258d45bc4" 
+aws ec2 describe-instance-status --instance-ids "i-0a0d8a23353013215" 
+aws ec2 describe-vpcs --vpc-ids "vpc-0265b40dc73459d15" 
+aws ec2 describe-subnets --subnet-ids "subnet-0e7a08c05dc7370d7" 
+aws iam get-instance-profile --instance-profile-name "EC2_Role_272588.60334425" 
+aws ec2 describe-security-groups --group-ids "sg-051314c43c9d80f8a" 
+aws ec2 describe-images --image-ids "ami-0e449927258d45bc4" 
+aws ec2 describe-instance-status --instance-ids "i-0a0d8a23353013215" 
+aws ec2 describe-route-tables --filters '{"Name":"association.subnet-id","Values":["subnet-0e7a08c05dc7370d7"]}' 
+aws ec2 describe-instance-connect-endpoints --max-results "50" 
+aws ec2 describe-route-tables --filters '{"Name":"association.main","Values":["true"]}' '{"Name":"vpc-id","Values":["vpc-0265b40dc73459d15"]}' 
+aws ec2 describe-replace-root-volume-tasks --filters '{"Name":"instance-id","Values":["i-0a0d8a23353013215"]}' --max-results "50" 
+aws ec2 describe-volumes --volume-ids "vol-0f5fa7368f150ccb2" 
+aws cloudwatchinternal2013 search-metrics --query "Namespace="CWAgent" InstanceId="i-0a0d8a23353013215"" --max-results "500" 
+aws ec2 describe-network-interfaces --filters '{"Name":"attachment.instance-id","Values":["i-0a0d8a23353013215"]}' 
+aws ec2 describe-addresses --filters '{"Name":"instance-id","Values":["i-0a0d8a23353013215"]}' 
+aws ec2 describe-instances --instance-ids "i-0a0d8a23353013215" 
+aws ec2 describe-network-interfaces --filters '{"Name":"attachment.instance-id","Values":["i-0a0d8a23353013215"]}' 
+aws ec2 describe-instance-credit-specifications --instance-ids "i-0a0d8a23353013215" 
+aws ec2 describe-instance-attribute --instance-id "i-0a0d8a23353013215" --attribute "disableApiStop" 
+aws ec2 describe-instance-attribute --instance-id "i-0a0d8a23353013215" --attribute "disableApiTermination" 
+aws health describe-events --filter '{"services":["EC2"],"entityValues":["i-0a0d8a23353013215"],"eventTypeCodes":["AWS_EC2_SIMPLIFIED_AUTO_RECOVERY_SUCCESS","AWS_EC2_INSTANCE_AUTO_RECOVERY_SUCCESS","AWS_EC2_SIMPLIFIED_AUTO_RECOVERY_FAILURE","AWS_EC2_INSTANCE_AUTO_RECOVERY_FAILURE"],"startTimes":[{"from":"2025-04-26T01:47:20.216Z"}]}' 
+aws ssm describe-instance-information --filters '{"Key":"InstanceIds","Values":["i-0a0d8a23353013215"]}' 
+aws computeoptimizer get-enrollment-status  
+aws ssm describe-instance-information --filters '{"Key":"InstanceIds","Values":["i-0a0d8a23353013215"]}' 
+aws iam get-instance-profile --instance-profile-name "EC2_Role_272588.60334425" 
+aws ec2 describe-instance-status --instance-ids "i-0a0d8a23353013215" 
+aws ec2 describe-route-tables --filters '{"Name":"association.subnet-id","Values":["subnet-0e7a08c05dc7370d7"]}' 
+aws ec2 describe-instance-status --instance-ids "i-0a0d8a23353013215" 
+aws ec2 describe-security-groups --group-ids "sg-051314c43c9d80f8a" 
+aws ec2 describe-images --image-ids "ami-0e449927258d45bc4" 
+aws ec2 describe-instance-connect-endpoints --max-results "50" 
+aws ec2 describe-route-tables --filters '{"Name":"association.main","Values":["true"]}' '{"Name":"vpc-id","Values":["vpc-0265b40dc73459d15"]}' 
+aws cloudwatchinternal2013 search-metrics --query "Namespace="CWAgent" InstanceId="i-0a0d8a23353013215"" --max-results "500" 
+aws ec2 describe-network-interfaces --filters '{"Name":"attachment.instance-id","Values":["i-0a0d8a23353013215"]}' 
+aws ec2 describe-replace-root-volume-tasks --filters '{"Name":"instance-id","Values":["i-0a0d8a23353013215"]}' --max-results "50" 
+aws ec2 describe-volumes --volume-ids "vol-0f5fa7368f150ccb2" 
+aws ec2 describe-network-interfaces --filters '{"Name":"attachment.instance-id","Values":["i-0a0d8a23353013215"]}' 
+aws ec2 describe-addresses --filters '{"Name":"instance-id","Values":["i-0a0d8a23353013215"]}' 
+aws ec2 describe-instances --instance-ids "i-0a0d8a23353013215" 
+aws computeoptimizer get-enrollment-status  
+aws ec2 describe-instance-credit-specifications --instance-ids "i-0a0d8a23353013215" 
+aws ec2 describe-instance-attribute --instance-id "i-0a0d8a23353013215" --attribute "disableApiStop" 
+aws ec2 describe-instance-attribute --instance-id "i-0a0d8a23353013215" --attribute "disableApiTermination" 
+aws ssm describe-instance-information --filters '{"Key":"InstanceIds","Values":["i-0a0d8a23353013215"]}' 
+aws health describe-events --filter '{"services":["EC2"],"entityValues":["i-0a0d8a23353013215"],"eventTypeCodes":["AWS_EC2_SIMPLIFIED_AUTO_RECOVERY_SUCCESS","AWS_EC2_INSTANCE_AUTO_RECOVERY_SUCCESS","AWS_EC2_SIMPLIFIED_AUTO_RECOVERY_FAILURE","AWS_EC2_INSTANCE_AUTO_RECOVERY_FAILURE"],"startTimes":[{"from":"2025-04-26T01:51:22.464Z"}]}' 
+aws iam get-instance-profile --instance-profile-name "EC2_Role_272588.60334425" 
+aws ec2 describe-instance-status --instance-ids "i-0a0d8a23353013215" 
+aws elbv2 describe-load-balancers --page-size "200" 
+aws ec2 describe-account-attributes  
+aws ec2 describe-instance-types --max-results "100" 
+aws ec2 describe-tags --max-results "1000" --filters '{"Name":"resource-type","Values":["instance"]}' 
+aws cloudwatchinternal2013 describe-alarms --max-records "1000" --state-value "ALARM" 
+aws ec2 describe-instance-types --max-results "100" 
+aws ec2 describe-instances --filters '{"Name":"instance-state-name","Values":["running"]}' --max-results "1000" 
+aws ec2 describe-instance-status --instance-ids "i-07a911d7cee9993ba" "i-0a0d8a23353013215" 
+aws ec2 describe-addresses --filters '{"Name":"instance-id","Values":["i-07a911d7cee9993ba","i-0a0d8a23353013215"]}' 
+aws ec2 describe-instance-types --max-results "100" --next-token "AAIAAR4szV6uUSyuolWtDZWqjZMYcfp4_b9op21iUFlaDl2Cd7JYnvc-JKPn0ZmchmJm7S2xOmrfCHJjMcoRZ1FP5QiklLOkM2RooICaO8Ae3_s-tZwMoZzLFwBjV5zZ6OVCiVV1Hq5feF-m6WS6mTGQxptXsKTvJlYTS5kyhPXn8TcHghaHDVUmuXgZnnOQZJArcou6KhoJI_TkAVO3" 
+aws ec2 describe-instance-types --max-results "100" --next-token "AAIAAabdw2AvTpOYsoz_2u3t11DsyKUrpxHiE7wn7Mij6SzqFYx41dPvn8rIVAPQ-xgbyZUUh7G0qkNFBxThLQxI_bKcymc9IY-69UDocFBWgl6ZjKC0sU0sOk4F2lYOG2eJ54RnihR0SoBR-5vMDJoR7IQhAuNXIOAji3PGDdIqsTU2HQS0W9AmnWCfZPg4ce7f_0PVm9lr_e7gTnI=" 
+aws ec2 describe-instance-types --max-results "100" --next-token "AAIAARayD5m1o-W2Gnfu0X_y2RAREbHV2rvmivLjwWhdyDUnAEkFFSHrtfdYq-Apinghbcmr0ADE-vmy_3d1i0oBHpyJDP6xN45F0VE3OuiieiYJng_mOaNu_6kHkiZTC_BahspTNBekRTrOyfCwgG47wb53YkJQB53X749TIWXi_tEzw-ei5TEYtqlu9CBDlw2myPb6IGYXGuGm5vCl" 
+aws ec2 describe-instance-types --max-results "100" --next-token "AAIAAS04R_NPN8qL_a1EhJYuBcoSZt6a37EbBvA0HjU7w3acn8c7zAUD20HZ--64KRvx4Kf2p6lNerl20eVH915LnmAu-rYgtWuM67NmqDG8LvNkIhOQOaInSdTWabP4nkV-UGoLv4NMkMKXUCbRhVGdw3y-DhwBXqRK8dVERLv5Cgznp-aDfgGTgRUhVgiKjUwNYj3wqA9797JNTvVL" 
+aws ec2 describe-instance-types --max-results "100" --next-token "AAIAARsPNBY3R6xWIN9wNaiwCzju2xXGhRMvANWANuqAz7TE48YuQqB7ixsPHCQBX7lKJWZFp8P0lja3_DaNTVvXPVIOKLWbT5V-NI34NKg5b4cKsEvfJebuw_q49sXVVqGBRs2sGWWOjzIrR6Gq3wbVO7RccDADdDpwVR77ZOvknEoz4g5aGrU6bop7f2J4wCtLASKrRvBN24sCpSFF" 
+aws ec2 describe-instance-types --max-results "100" --next-token "AAIAAc8sxE1rS7SQG1zr58gbOypbs9mi3DRJph2XZgJYNR69h3M_-Fxtn0IPbVE78KQTeCbaRM8qZzOlhuRHiVj3foXIf3bli5_ouPLgsLk4TH63Gjfc2QpJuLuUNBnzlqfHIfRl1RCSUvajC2t6ztFHvEzkuAv3UIRgyTAQeYtmJDuEue_qndoQCNrUiIAkRBMdHcBg1hzntp_0LGIX" 
+aws ec2 describe-instance-types --max-results "100" --next-token "AAIAAZqfqZWAqJyzM_4UrYaL7NT2w7RbrEIEX3y7JYcrr6nrnxDCtso3yKkQXTC9_m19JKZX3-bjABGDld7iHiCP_KdZatfJfUYwbsfDqrG_DLXtVxKKWK4nz9TdYh8XNb1kvrpuQbGktr3jMF9mEnxnCQsOS8wRAa_u81wthiAVHhoTMbH8EP_Wr26Vb7Zftyo7n8cEuTsHireRZA==" 
+aws ec2 describe-instance-types --max-results "100" --next-token "AAIAAeLc7_VozMA46TTEd-_1rzdofIJ_-jJNx7dmpGwzUJWdqX4KLUf4SUwcXqk5N1q8zLtUL43sRXQGZXcxF3d_HCVTn6D3OMNZxks9JvJCWJBEKriCIgJoMr5BpaQmw8d_nlObF7ceXC_AiCfqUuIGjW5n1UyQJD27VVTk2rWrdrtNPnnDtaFD6IBvbJcWvH3TWvZW2r2fiZ8=" 
+aws ec2 describe-network-interfaces --filters '{"Name":"attachment.instance-id","Values":["i-07a911d7cee9993ba"]}' 
+aws ec2 describe-volumes --volume-ids "vol-0b54de3f9a1b66930" 
+aws cloudwatchinternal2013 search-metrics --query "Namespace="CWAgent" InstanceId="i-07a911d7cee9993ba"" --max-results "500" 
+aws ec2 describe-instance-image-metadata --instance-ids "i-07a911d7cee9993ba" 
+aws ec2 describe-instances --instance-ids "i-07a911d7cee9993ba" 
+aws ec2 describe-replace-root-volume-tasks --filters '{"Name":"instance-id","Values":["i-07a911d7cee9993ba"]}' --max-results "50" 
+aws ec2 describe-instance-attribute --instance-id "i-07a911d7cee9993ba" --attribute "disableApiTermination" 
+aws ec2 describe-network-interfaces --filters '{"Name":"attachment.instance-id","Values":["i-07a911d7cee9993ba"]}' 
+aws ec2 describe-addresses --filters '{"Name":"instance-id","Values":["i-07a911d7cee9993ba"]}' 
+aws ec2 describe-instance-credit-specifications --instance-ids "i-07a911d7cee9993ba" 
+aws ec2 describe-instance-attribute --instance-id "i-07a911d7cee9993ba" --attribute "disableApiStop" 
+aws computeoptimizer get-enrollment-status  
+aws ssm describe-instance-information --filters '{"Key":"InstanceIds","Values":["i-07a911d7cee9993ba"]}' 
+aws health describe-events --filter '{"services":["EC2"],"entityValues":["i-07a911d7cee9993ba"],"eventTypeCodes":["AWS_EC2_SIMPLIFIED_AUTO_RECOVERY_SUCCESS","AWS_EC2_INSTANCE_AUTO_RECOVERY_SUCCESS","AWS_EC2_SIMPLIFIED_AUTO_RECOVERY_FAILURE","AWS_EC2_INSTANCE_AUTO_RECOVERY_FAILURE"],"startTimes":[{"from":"2025-04-26T01:57:31.240Z"}]}' 
+aws ec2 describe-images --image-ids "ami-062f7200baf2fa504" 
+aws ec2 describe-vpcs --vpc-ids "vpc-0265b40dc73459d15" 
+aws ec2 describe-subnets --subnet-ids "subnet-0320576caae249981" 
+aws ec2 describe-instance-status --instance-ids "i-07a911d7cee9993ba" 
